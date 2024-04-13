@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/7126d3aa59.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="formContent">
+      <form>
+        <label for="gross">Enter gross annual income</label>
+        <div class="field">
+          <input
+            type="text"
+            id="gross"
+            name="gross"
+            placeholder="Enter gross annual income"
+          />
+          <div class="error1">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <span class="tooltip">Please enter numbers only</span>
+          </div>
+        </div>
+        <label for="extra">Enter extra income</label>
+        <div class="field">
+          <input
+            type="text"
+            id="extra"
+            name="extra"
+            placeholder="Enter extra income from other sources"
+          />
+          <div class="error2">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <span class="tooltip">Please enter numbers only</span>
+          </div>
+        </div>
+        <label for="age">Enter age group</label>
+        <div class="field">
+          <select name="age" id="age">
+            <option value="0">Select age group</option>
+            <option value="40">&lt 40</option>
+            <option value="50">≥ 40 & &lt 60</option>
+            <option value="60">≥ 60</option>
+          </select>
+          <div class="error3">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <span class="tooltip">Please select age group</span>
+          </div>
+        </div>
+        <label for="total">Enter total applicable deductions</label>
+        <div class="field">
+          <input
+            type="text"
+            id="total"
+            name="total"
+            placeholder="Add total applicable deductions"
+          />
+          <div class="error4">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <span class="tooltip">Please enter numbers only</span>
+          </div>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </div>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <h3>Your overall income would be</h3>
+        <h1 class="answer">0</h1>
+        <h3>after tax deductions</h3>
+        <button id="close">Close</button>
+      </div>
+    </div>
+  </body>
+</html>
